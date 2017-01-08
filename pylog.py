@@ -57,7 +57,7 @@ class PyLog():
             in_func = False
             funcCaller = funcName = fileVariableName = indent = ''
             f.write('import time\n')
-            for i,line in enumerate(fileContents):
+            for lineNumber,line in enumerate(fileContents):
                 lineIndent = self._getIndent(line)
                 if line.strip()[:3] == 'def':
                     if in_func:
